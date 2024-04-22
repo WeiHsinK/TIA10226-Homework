@@ -120,7 +120,5 @@ public class HomeWork_02 {
                 "DDDD\n" +
                 "EEEEE\n" +
                 "FFFFFF");
-
-
     }
 }
