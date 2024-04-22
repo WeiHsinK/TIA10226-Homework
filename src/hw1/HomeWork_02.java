@@ -3,6 +3,7 @@ package hw1;
 //課後練習01
 public class HomeWork_02 {
     public static void main(String[] args) {
+        int test; //測試修改
         System.out.println("課後練習02");
         System.out.println();
 
