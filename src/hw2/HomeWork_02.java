@@ -9,10 +9,10 @@ public class HomeWork_02 {
         //請設計一隻Java程式，計算1～1000的偶數和(2+4+6+8+…+1000)
         System.out.println("01.計算1～1000的偶數和(2+4+6+8+…+1000)");
         int sum = 0;
-        //int a = 0;
+        int a;
         for (int i = 1; i <= 1000 ; i++) {
             if(i % 2 == 0) {
-                int a = i;
+                a = i;
                 sum += a;
             }
         }
@@ -30,11 +30,11 @@ public class HomeWork_02 {
         System.out.println();
         //請設計一隻Java程式，計算1～10的連乘積(1*2*3*…*10) (用while迴圈)
         System.out.println("03.計算1～10的連乘積(1*2*3*…*10) (用while迴圈)");
-        int a = 1;
+        int x = 1;
         int sum2 = 1;
-        while (a <= 10){
-            sum2 *= a; //sum2 = sum2 * a
-            a++;
+        while (x <= 10){
+            sum2 *= x; //sum2 = sum2 * a
+            x++;
         }
         System.out.println("連乘積為" + sum2);
 
@@ -69,14 +69,18 @@ public class HomeWork_02 {
         輸出結果為阿文可以選擇的數字有哪些？總共有幾個？
          */
         System.out.println("05.輸出1-49中不論是個位數或是十位數都不為4的數字有哪些?共有幾個?");
-        //4 14 24 34 40 44
-        int x;
-        for (int i = 1; i <= 49 ; i++) {
-            if(i % 4 != 0){
-              x = i;
-                System.out.print(x + "\t");
+        //4 14 24 34 40-49
+        int count = 0;
+        for (int i = 1; i < 40 ; i++) {
+            if(i == 4 || i == 14 || i == 24 || i == 34){
+                continue;
             }
+            System.out.print(i + "\t");
+            count++;
         }
+        System.out.println();
+        System.out.println("這些數字一共有:" + count + "個");
+
         System.out.println();
         /*
         請設計一隻Java程式，輸出結果為以下：
@@ -92,16 +96,25 @@ public class HomeWork_02 {
         1
          */
         System.out.println("06.請設計一隻Java程式，輸出結果為以下：\n" +
-                "        1 2 3 4 5 6 7 8 9 10\n" +
-                "        1 2 3 4 5 6 7 8 9\n" +
-                "        1 2 3 4 5 6 7 8\n" +
-                "        1 2 3 4 5 6 7\n" +
-                "        1 2 3 4 5 6\n" +
-                "        1 2 3 4 5\n" +
-                "        1 2 3 4\n" +
-                "        1 2 3\n" +
-                "        1 2\n" +
-                "        1");
+                "1 2 3 4 5 6 7 8 9 10\n" +
+                "1 2 3 4 5 6 7 8 9\n" +
+                "1 2 3 4 5 6 7 8\n" +
+                "1 2 3 4 5 6 7\n" +
+                "1 2 3 4 5 6\n" +
+                "1 2 3 4 5\n" +
+                "1 2 3 4\n" +
+                "1 2 3\n" +
+                "1 2\n" +
+                "1");
+        System.out.println();
+        int num = 10;
+        for (int i = 1; i <= 10 ; i++) {
+            for (int j = 1; j <= num ; j++) {
+                System.out.print(j + " ");
+            }
+            num--;
+            System.out.println();
+        }
 
         System.out.println();
         /*
@@ -120,5 +133,14 @@ public class HomeWork_02 {
                 "DDDD\n" +
                 "EEEEE\n" +
                 "FFFFFF");
+        System.out.println();
+        char A = 65;
+        for (int i = 1; i <= 6 ; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(A);
+            }
+            A++;
+            System.out.println();
+        }
     }
 }
