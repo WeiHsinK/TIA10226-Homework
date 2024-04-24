@@ -1,4 +1,4 @@
-package hw1;
+package hw2;
 
 //課後練習01
 public class HomeWork_02 {
